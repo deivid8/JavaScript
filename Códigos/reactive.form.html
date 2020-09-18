@@ -1,0 +1,47 @@
+<div>
+  <p class="ion-margin">
+    Preencha os campos abaixo com atenção para cadastrar um novo usuário.
+  </p>
+
+  <form>
+    <input type="hidden" id="id" name="id" />
+    <ion-list lines="full" class="ion-margin">
+
+      <!-- Campo 'name' -->
+      <ion-item>
+        <ion-label for="name" position="floating" color="primary">Nome:</ion-label>
+        <ion-input type="text" id="name" name="name"></ion-input>
+      </ion-item>
+
+      <!-- Campo 'email' -->
+      <ion-item>
+        <ion-label for="email" position="floating" color="primary">E-mail:</ion-label>
+        <ion-input type="email" id="email" name="email"></ion-input>
+      </ion-item>
+
+      <!-- Campo 'avatar' -->
+      <ion-item>
+        <ion-label for="avatar" position="floating" color="primary">URL do avatar:</ion-label>
+        <ion-input type="url" id="avatar" name="avatar"></ion-input>
+      </ion-item>
+
+      <!-- Campo 'passwd' -->
+      <ion-item>
+        <ion-label for="passwd" position="floating" color="primary">Senha:</ion-label>
+        <ion-input type="password" id="passwd" name="passwd"></ion-input>
+      </ion-item>
+	  
+	  <!-- Campo Status -->
+      <ion-item>
+        <ion-label for="status" color="primary">Status:</ion-label>
+        <ion-toggle id="status" name="status" slot="end" color="primary"></ion-toggle>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button type="submit" expand="block" class="ion-margin">
+      Cadastrar usuário
+    </ion-button>
+
+  </form>
+</div>
