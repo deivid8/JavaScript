@@ -4,7 +4,7 @@ function now() {
         day = date.getDate().toString(),
         dayF = (day.length == 1) ? '0' + day : day,
         month = (date.getMonth() + 1).toString(),
-        monthF = (month.length == 1) ? '0' + mes : mes,
+        monthF = (month.length == 1) ? '0' + month : month,
         yearF = date.getFullYear(),
         hour = date.getHours().toString(),
         hourF = (hour.length == 1) ? '0' + hour : hour,
