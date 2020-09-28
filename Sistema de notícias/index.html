@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias Google News</title>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <header>--HEADER--</header>
+        <nav>--MENU--</nav>
+        <main>
+
+            <h3>Notícias Google News</h3>
+            <p>Últimas notícias do Brasil e do mundo no Google News sobre '<span id="keyword"></span>'.</p>
+            <div id="news"></div>
+
+        </main>
+        <footer>--FOOTER--</footer>
+    </div>
+
+    <!-- jQuery -->
+    <script src="jquery-3.5.1.min.js"></script>
+
+    <!-- Parser RSS -->
+    <script src="jquery.rss.min.js"></script>
+
+    <!-- Main App -->
+    <script>
+        /* Exibe notícias */
+        /*
+            Como usar:
+                showNews(seletor, quantidade, assunto);
+        */
+        showNews('#news', 15, 'gato');
+
+        /* Exibe notícias via RSS */
+        function showNews(htmlElement, totalItems, keyWord) {
+            $(htmlElement).rss('https://news.google.com/rss/search?q=' + keyWord + '&hl=pt-BR', {
+                limit: totalItems,
+                layoutTemplate: '<ul>{entries}</ul>',
+                entryTemplate: '<li><a href="{url}" target="_blank">{title}</li>'
+            });
+            $('#keyword').html(keyWord);
+        }
+    </script>
+
+</body>
+
+</html>
