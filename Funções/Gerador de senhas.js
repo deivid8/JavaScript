@@ -1,5 +1,5 @@
 // Gera caracteres aleatórios
-randomChars(len) {
+function randomChars(len) {
 	
 	// Armazenará a sequência aleatória
 	var text = '';
