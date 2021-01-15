@@ -1,4 +1,5 @@
 /*! js-cookie v3.0.0-rc.1 | MIT */
+/* Original repository: https://github.com/js-cookie/js-cookie */
 ;
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
